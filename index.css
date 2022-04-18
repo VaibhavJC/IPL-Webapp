@@ -1,0 +1,407 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-image:url("https://w0.peakpx.com/wallpaper/74/598/HD-wallpaper-stadium-cricket-landscape-scenes-world-biggest-stadium-thumbnail.jpg");
+    background-size: cover;
+}
+
+#cricket-header{
+    width: 100%;
+    padding: 8px;
+    box-shadow: 0 0 12px black;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+}
+
+.fixed-header{
+    position: fixed;
+}
+
+#left-div-header{
+    width: 50px;
+}
+#left-div-header img{
+    width: 100%;
+    height: 50px;
+}
+
+#mainPage{
+    margin-top: 90px;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#searchbar-mainpage{
+    margin-bottom: 30px;
+    margin-left: 1200px;
+}
+
+#serchBox{
+    padding: 4px 8px;
+    margin-right: 10px;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 12px black;
+    border-radius: 8px;
+    
+}
+
+#available-teams-text-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+    padding: 0 4%;
+    margin-bottom: 5px;
+}
+
+#available-teams-text{
+    color: white;
+    font-size: 18px;
+}
+
+#team-cards-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+   
+}
+
+.team-cards{
+    width: 43%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    box-sizing: border-box;
+    box-shadow: 0 0 12px black;
+    margin: 10px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    background-color: rgba(250, 250, 4, 0.886);
+    cursor: pointer;
+    transition: all 0.5s;
+    border: 8px double blue;
+}
+
+.team-cards:hover{
+    transform: translateY(-5px);
+}
+
+.team-card-left-div{
+    width: 40%;
+    background-color: goldenrod;
+    align-self: stretch;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 5px;
+}
+.team-card-left-div img{
+    width: 100%;
+    border-top-left-radius: 5px;
+}
+
+.team-card-right-div{
+    width: 60%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.team-card-right-div > h3{
+    font-size: 9px;
+    font-weight: 600;
+}
+
+.teamName-team-card{
+    font-weight: 500;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+
+#championshipText{
+    font-weight: 600;
+}
+
+#championshipCount{
+    font-weight: 400;
+}
+
+
+#player-cards-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.player-cards{
+    width: 100%;
+    box-shadow: 2px 2px 12px var(--primary-color);
+    display: flex;
+    padding: 2%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.5s ;
+    background-color: rgb(130, 238, 168);
+    border: 8px double saddlebrown;
+}
+.player-cards:hover{
+    transform: translateY(-5px);
+}
+
+.left-div-cards{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left-div-cards img{
+    width: 100%;
+    height: 100%;
+    background-color: orange;
+    border-radius: 10px;
+    border: 8px double rgb(2, 83, 34);
+}
+
+.right-div-cards{
+    width: 60%;
+    padding-left: 10px;
+}
+.right-div-cards h3{
+    font-size: 14px;
+}
+.right-div-cards span{
+    font-size: 13px;
+    font-weight: 500;
+}
+
+#playerNameText{
+     font-family: 'Bebas Neue', cursive;
+     font-size: 22px;
+     letter-spacing: 1px;
+     font-weight: 500;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+   overflow-y: auto;
+   z-index: 200;
+}
+.header-relative{
+    display: none;
+}
+.overlay-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  width: 70%;
+  padding: 10px;
+  background: rgb(188, 9, 233);
+  border-radius: 5px;
+  position: relative;
+  margin: 0 auto;
+  transition: all 1s;
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+
+
+
+#closeIconWrapper{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+#role{
+    margin-bottom: 10px;
+}
+
+#closeIcon{
+    font-size: 26px;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: absolute;
+}
+#closeIcon:hover{
+    color: var(--primary-color);
+}
+
+#formWrapper-popup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    
+}
+#formWrapper-popup > p{
+    margin-top: 10px;
+} 
+#formWrapper-popup > input{
+    padding: 0 5px;
+} 
+
+.border-blue{
+    border: 2px solid var(--primary-color);
+    outline: none;
+}
+
+#avatarImagesWrapper > div{
+    width: 15%;
+}
+#teamImagesWrapper > div{
+    width: 15%;
+}
+
+.small-images-popup-avatar-active{
+    border: 4px solid red;
+}
+
+.small-images-popup-team-active{
+    border: 4px solid red;
+}
+
+#avatarImagesWrapper > div img{
+    width: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#teamImagesWrapper > div img{
+    width: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#addPlayerText{
+    font-size: 24px;
+}
+
+#popupalert{
+    font-size: 14px;
+    color: red;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 20px;
+    visibility: hidden;
+}
+
+#add-player-btn-popup{
+    width: 100%;
+    margin: 0 auto;
+   
+    margin-bottom: 20px;
+     padding: 5px 5px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.5s;
+    background-color: yellowgreen;
+}
+
+
+.all-btn-style{
+    background-color: white;
+    padding: 5px 5px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-weight: 600;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+
+@media(min-width:1200px){
+    #left-div-header{
+        width: 150px;
+    }
+    #team-cards-wrapper{
+        justify-content: flex-start;
+        padding: 0 4%;
+    }
+    #available-teams-text-wrapper{
+        padding: 0 5%;
+    }
+    #available-teams-text{
+        color: white;
+        font-size: 20px;
+    }
+    .team-cards{
+        width: 27%;
+    }
+    .team-card-right-div > h3{
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .teamName-team-card{
+        font-weight: 700;
+    }
+
+    #player-cards-wrapper{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-top: 10px;
+    }
+
+    .player-cards{
+        width: 30%;
+    }
+
+    #mainPage{
+        margin-top: 90px;
+        padding: 0 5%;
+    }
+
+    .popup {
+    width: 30%;
+    }
+    .all-btn-style{
+        padding: 5px 20px;
+    }
+
+    #serchBox{
+        padding: 4px 10px;
+        font-size: 16px;
+    } 
+
+    .teamName-team-card{
+        font-size: 22px;
+        font-weight: 500;
+    }
+   
+}

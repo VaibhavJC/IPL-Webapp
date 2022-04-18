@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL 2022</title>
+    <link rel="stylesheet" href="./index.css" type="text/css">
+    <link rel="stylesheet" href="./Base File/base.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./index.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <header id="cricket-header" class="fixed-header">
+        <div>
+            <div id="left-div-header">
+                <img src="https://www.india.com/wp-content/uploads/2020/08/IPL-Logo.jpg" alt="logo">
+            </div>
+        </div>
+        <div>
+            <button class="all-btn-style" id="addNewPlayer-Btn">Add Player & Team</button>
+        </div>
+    </header>
+    <main>
+
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <div id="closeIconWrapper">
+                    <i class="far fa-times-circle" id="closeIcon"></i>
+                </div>
+                <h3 id="addPlayerText">Add Player</h3>
+                <div id="formWrapper-popup">
+                    <p>Player Name</p>
+                    <input class="border-blue" id="popup-player-name" type="text">
+                    <p>Price</p>
+                    <input class="border-blue" id="popup-price-name" type="text">
+
+                    <p>Playing Status</p>
+                    <select class="border-blue" name="playingstatus" id="playingstatus">
+                        <option value="Select">--Select--</option>
+                        <option value="playing">Playing</option>
+                        <option value="not-playing">Not-Playing</option>
+                    </select>
+                    <p>Role</p>
+                    <select class="border-blue" name="role" id="role">
+                        <option value="Select">--Select--</option>
+                        <option value="Batsman">Batsman</option>
+                        <option value="bowler">Bowler</option>
+                        <option value="allrounder">All-rounder</option>
+                        <option value="Wicketkeeper">Wicketkeeper batsman</option>
+                    </select>
+                    <h3 id="addPlayerText">Add Team</h3>
+                    <p>Team Name</p>
+                    <input class="border-blue" id="popup-team-name" type="text">
+                     
+                    </div>
+                    <p>Player-count</p>
+                    <input class="border-blue" id="popup-player-count" type="number">
+                    <p>Top-Batsman</p>
+                    <input class="border-blue" id="popup-topBatsman-name" type="text">
+                    <p>Top-Bowler</p>
+                    <input class="border-blue" id="popup-topBowler-name" type="text">
+
+
+                    <p id="popupalert">Please Fill All Details!</p>
+                    <Button id="add-player-btn-popup">Add Player & Team</Button>
+                </div>
+            </div>
+        </div>
+
+        <section id="mainPage">
+            <div id="searchbar-mainpage">
+                <input id="serchBox" type="text" placeholder="Search for a Team">
+                <button class="all-btn-style" id="searchBtn">Search</button>
+                <button class="all-btn-style" id="clearBtn">Clear</button>
+            </div>
+            <div id="available-teams-text-wrapper">
+                <h3 id="available-teams-text">Teams</h3>
+            </div>
+
+            <div id="team-cards-wrapper">
+
+            </div>
+            <div id="available-teams-text-wrapper">
+                <h3 id="available-teams-text">Players Information</h3>
+            </div>
+            <div id="player-cards-wrapper">
+             
+            </div>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
